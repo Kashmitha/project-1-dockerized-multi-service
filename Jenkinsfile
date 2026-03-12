@@ -26,7 +26,7 @@ pipeline {
                 sh '''
                     docker compose up -d backend
                     sleep 10
-                    curl -f http://devops-backend:5000/health || exit 1
+                    curl -f http://localhost:5000/health || exit 1
                     echo "✅ Backend health check passed"
                 '''
             }
